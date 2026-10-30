@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{article.title}}
+{% endblock %}
+
+{% block content %}
+<div class="container mt-10">
+    <div class="align-items-center justify-content-center">
+        <div class="mb-10 d-flex column-gap-5 justify-content-between border p-5 align-items-center">
+            <p class="m-0">Фото:</p>
+            {% if article.photo %}
+            <img src="{{article.photo.url}}" alt="">
+            {% else %}
+            <h4 class="m-0">Нет фотографии</h4>
+            {% endif %}
+        </div>
+        <div class="mb-10 d-flex column-gap-5 justify-content-between border p-5 align-items-center">
+            <p class="m-0">Название:</p>
+            <h1 class="m-0">{{article.title}}</h1>
+        </div>
+        <div class="mb-10 d-flex column-gap-5 justify-content-between border p-5 align-items-center">
+            <p class="m-0">Описание:</p>
+            {% if article.description %}
+            <p class="m-0">{{article.description}}</p>
+            {% else %}
+            <p class="m-0">Нет описания</p>
+            {% endif %}
+        </div>
+        <div class="mb-10 d-flex column-gap-5 justify-content-between border p-5 align-items-center">
+            <p class="m-0">Категория:</p>
+            <h1 class="m-0">{{article.category.title}}</h1>
+        </div>
+        <div class="mb-10 d-flex column-gap-5 justify-content-between border p-5 align-items-center">
+            <p class="m-0">Автор:</p>
+            <h1 class="m-0">{{article.user.username}}</h1>
+        </div>
+        <div class="mb-10 d-flex column-gap-5 justify-content-between border p-5 align-items-center">
+            <p class="m-0">Дата создания:</p>
+            <h1 class="m-0">{{article.created_at}}</h1>
+        </div>
+    </div>
+</div>
+{% endblock %}
