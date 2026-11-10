@@ -107,4 +107,4 @@ proc_name = "django-project"
 # backend.wsgi:application
 # Именно через этот объект Gunicorn
 # начинает выполнение Django-приложения.
-wsgi_app = "test_project.wsgi:application"
+wsgi_app = "test_project.test_project.wsgi:application"
