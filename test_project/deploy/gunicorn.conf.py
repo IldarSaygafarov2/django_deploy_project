@@ -5,7 +5,7 @@ import multiprocessing  # Модуль стандартной библиотек
 # Nginx будет отправлять запросы именно в этот сокет.
 # Для TCP можно использовать:
 # bind = "0.0.0.0:8000"
-bind = "unix:/run/gunicorn.sock"
+bind = "unix:/run/gunicorn/gunicorn.sock"
 
 # Количество рабочих процессов (workers).
 # Каждый worker — отдельный процесс Python.
